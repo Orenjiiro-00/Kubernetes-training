@@ -3,7 +3,8 @@ kind: Pod
 metadata:
   name: pod-red
   labels:
-    app:web
+    namespace: production
+    app: web
 spec:
   containers:
   - name: pod-red
