@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web-red
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: web-red
+  template:
+    metadata:
+      name: web-red
+      labels:
+        app: web-red
+    spec:
+      containers:
+      - name: web-red
+        image: kodekloud/webapp-color
+        ports:
+          - containerPort: 8080
+        env:
+          - name: APP_COLOR
+            value: red
