@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-herve
+spec:
+  containers:
+  - name: nginx-herve
+    image: nginx:1.21
+    ports:
+      - containerPort: 8080
